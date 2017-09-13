@@ -7,8 +7,8 @@ FC=ifort
 LD=ifort
 
 # Compiler optimization flags.  You will definitely want to play with these!
-OPTFLAGS = -O3
-CFLAGS = -std=gnu99 -funroll-loops -ftree-vectorize -ffast-math
+OPTFLAGS = -O3 -ffast-math
+CFLAGS = -std=gnu99 -funroll-loops
 FFLAGS =
 LDFLAGS = -fopenmp -nofor_main
 
