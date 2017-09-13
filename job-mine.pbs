@@ -6,5 +6,5 @@
 
 module load intel
 cd $PBS_O_WORKDIR
-./matmul-mine
+./matmul-mine timing-ikj.csv
 
