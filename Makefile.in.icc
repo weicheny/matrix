@@ -1,5 +1,5 @@
 # Versions to build
-BUILDS=mine basic blocked f2c blas mkl mine_ikj mine_jik mine_jki
+BUILDS=mine_ikj mine_jki mine_jik mine basic blocked f2c blas mkl
 
 # C and Fortran compilers
 CC=icc
@@ -8,8 +8,8 @@ LD=ifort
 
 # Compiler optimization flags.  You will definitely want to play with these!
 OPTFLAGS = -O3
-CFLAGS = -std=gnu99 
-FFLAGS = -ftree-vectorize -funroll-loops -ffast-math
+CFLAGS = -std=gnu99 -funroll-loops -ftree-vectorize -ffast-math
+FFLAGS =
 LDFLAGS = -fopenmp -nofor_main
 
 # Add -DDEBUG_RUN to CPPFLAGS to cut down on the cases.

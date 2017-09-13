@@ -1,0 +1,10 @@
+#!/bin/sh -l
+
+#PBS -l walltime=0:30:00
+#PBS -N matmul-mine_jik
+#PBS -j oe
+
+module load intel
+cd $PBS_O_WORKDIR
+./matmul-mine_jik timing-mine_jik.csv
+
