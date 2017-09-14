@@ -1,0 +1,11 @@
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) cmake/3.9.0     2) curl/7.54.0
+
+Matrix multiply failed.
+C(512,0) should be 159.239, was -7.19469e+273
+Error of 7.19469e+273, acceptable limit 6.77817e-11
+Compiler:	icc
+Options:	-O3
+Description:	mine dgemm.
+
