@@ -19,16 +19,9 @@ void basic_dgemm(const int lda, const int M, const int N, const int K,
     int j, k, i;
     for (j = 0; j < N; ++j) {
         for (k = 0; k < K; ++k) {
-          //  double cij = C[j*lda+i];
-	    double B_temp[K];
-	    //memcpy(A_temp, A+k*lda, M*sizeof(double));
-	    memcpy(B_temp, B+j*lda, K*sizeof(double));
             for (i = 0; i < M; ++i) {
 	          C[j*lda+i] += A[k*lda+i] * (*(double*)(B_temp+k));
-		    //	C[j*lda+i] += A[k*lda+i] * B[j*lda+k];
-        //        cij += A[k*lda+i] * B[j*lda+k];
-            }
-           
+	    }   
         }
     }
 }
